@@ -182,6 +182,7 @@ body {
 
 .post .conteudo img {
   width: 100%;
+  cursor: pointer;
 }
 
 .post .fundo .acoes {
@@ -308,6 +309,10 @@ body {
 
 .logo-mobile, .instagram-mobile {
   display: none !important;
+}
+
+ion-icon[name="heart-sharp"] {
+  color: red;
 }
 
 @media (max-width: 935px) {

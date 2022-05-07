@@ -1,4 +1,12 @@
+import React from "react";
+
 function Post(props) {
+  const [curtido, setCurtido] = React.useState("heart-outline");
+
+  function likePost() {
+    (curtido === "heart-outline") ? setCurtido("heart-sharp") : setCurtido("heart-outline");
+  } 
+
   return (
     <div class="post">
       <div class="topo">
@@ -12,13 +20,13 @@ function Post(props) {
       </div>
 
       <div class="conteudo">
-        <img src={props.imgPost} />
+        <img src={props.imgPost} onClick={likePost}/>
       </div>
 
       <div class="fundo">
         <div class="acoes">
           <div>
-            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name={curtido} onClick={likePost}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
