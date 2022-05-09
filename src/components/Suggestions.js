@@ -1,18 +1,4 @@
-function Suggestion(props) {
-  return (
-    <div class="sugestao">
-      <div class="usuario">
-        <img src={props.imgProfile} />
-        <div class="texto">
-          <div class="nome">{props.nameProfile}</div>
-          <div class="razao">{props.reasonProfile}</div>
-        </div>
-      </div>
-
-      <div class="seguir">Seguir</div>
-    </div>
-  );
-}
+import Suggestion from "./Suggestion";
 
 export default function Suggestions() {
   const suggestionsData = [
@@ -50,8 +36,8 @@ export default function Suggestions() {
         <div>Ver tudo</div>
       </div>
 
-      {suggestionsData.map((sugg) => (
-        <Suggestion imgProfile={sugg.imgProfile} nameProfile={sugg.nameProfile} reasonProfile={sugg.reasonProfile} />
+      {suggestionsData.map((item) => (
+        <Suggestion imgProfile={item.imgProfile} nameProfile={item.nameProfile} reasonProfile={item.reasonProfile} />
       ))}
     </div>
   );

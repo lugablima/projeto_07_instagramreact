@@ -3,7 +3,7 @@ import Suggestions from "./Suggestions";
 function User(props) {
   return (
     <div class="usuario">
-      <img src={props.imgUser} />
+      <img src={props.imgUser} alt="User"/>
       <div class="texto">
         <strong>{props.nameProfile}</strong>
         {props.nameUser}
@@ -23,7 +23,7 @@ export default function SideBar() {
         Hashtags • Idioma
       </div>
 
-      <div class="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
+      <div class="copyright">© 2022 INSTAGRAM DO FACEBOOK</div>
     </div>
   );
 }
